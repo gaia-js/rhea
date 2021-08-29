@@ -1,0 +1,20 @@
+{
+  "name": "rhea-cli",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/test_add.js",
+    "build": "tsc --build tsconfig.json",
+    "pub": "rm -rf dist/ && npm run build && npm version patch && cp -Rf proto/ ./dist/proto/ && cp -Rf package.json index.* ./dist/ && npm publish dist/"
+  },
+  "author": "yonggang.zhang<yonggang.zhang@17zuoye.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^7.10.9",
+    "debug": "^4.1.1",
+    "google-protobuf": "^3.7.0-rc.3",
+    "querystring": "^0.2.0",
+    "tslib": "^1.10.0"
+  }
+}
