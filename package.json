@@ -1,12 +1,12 @@
 {
   "name": "rhea-cli",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "node tests/test_add.js",
     "build": "tsc --build tsconfig.json",
-    "pub": "rm -rf dist/ && npm run build && npm version patch && cp -Rf proto/ ./dist/proto/ && cp -Rf package.json index.* ./dist/ && npm publish dist/"
+    "pub": "rm -rf dist/ && npm run build && npm version patch && cp -Rf proto/ ./dist/proto/ && cp -Rf package.json index.* ./dist/ && npm publish --registry=https://registry.npmjs.org dist/"
   },
   "author": "yonggang.zhang<yonggang.zhang@17zuoye.com>",
   "license": "ISC",
